@@ -130,10 +130,70 @@ if (typeof age !== "number") {
 	? Syntax: conditional ? truthy code block : falsey code block
 */
 
-let f1Team = "Sauber"
+let f1Team = "Aston Martin"
 
 if (f1Team === "Petronas") {
 	console.log("Toto Wolff")
 }
 
 f1Team === "Petronas" ? console.log("Toto Wolff") : null
+
+// ? Ternary Chaining (not recommended)
+
+f1Team === "Petronas" ? console.log("Toto Wolff")
+	: f1Team === "Red Bull" ? console.log("Laurent Mekkies")
+	: f1Team == "Aston Martin" ? console.log("Adrian Newey")
+	: console.log("We don't have this team")
+
+/* 
+	? Switch Statements
+	* a way to execute multiple expression with or without stop
+*/
+
+let teamPrincipal = "Zac Brown"
+
+switch(teamPrincipal) {
+	// ? what you're comparing against
+	case "Fred Vasseur":
+		// ? condition to run
+		console.log("Ferrari principal")
+		break // ? stops other cases from evaluating
+	case "Zac Brown":
+		console.log("McLaren Team Principal")
+		break
+	case "Guenther Steiner":
+		console.log("Funniest team principal")
+		break
+	default:
+		// ? equivalent of an else
+		console.log("Not someone we know")
+	}
+
+/* 
+	? Challenge
+	* create a shipping status checker
+	* create a variable called status containing one of the following
+		* pending
+		* shipped
+		* cancelled
+		* delivered
+	* use a switch statement or a ternary to print appropriate message
+		* Your order is being prepared
+		* Your order is on its way
+		* Your order has been delivered
+		* Your order was cancelled
+		* Uknown order status
+*/
+
+let status = "lksajflskj"
+
+switch (status) {
+	case "pending":
+		console.log("Order pending")
+		break
+	case "shipped":
+		console.log("Order shipped")
+		break
+	default:
+		console.log("Unknown status")
+}
